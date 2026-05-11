@@ -22,7 +22,7 @@ body {
     padding: 0 20px;
 }
 
-/* HEADER - FB Style */
+/* HEADER */
 .main-header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
@@ -99,7 +99,7 @@ body {
     min-height: calc(100vh - 200px);
 }
 
-/* SIDEBAR - FB Profile Style */
+/* SIDEBAR */
 .Account-sidebar {
     flex: 0 0 320px;
     position: sticky;
