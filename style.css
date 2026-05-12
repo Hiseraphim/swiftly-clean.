@@ -46,6 +46,13 @@ nav h2 {
     justify-content: center;
 }
 
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    align-items: center;
+}
+
 .nav-btn {
     background: white;
     color: #2F80ED;
