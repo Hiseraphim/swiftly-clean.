@@ -76,6 +76,11 @@ nav h2 {
     transition: background 0.3s;
 }
 
+.nav-bar a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #1877f2;
+
+
 .nav-btn:hover {
     background: #f0f0f0;
 }
