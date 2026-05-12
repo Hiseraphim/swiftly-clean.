@@ -64,6 +64,11 @@ nav h2 {
     position: relative;
 }
 
+.nav-bar a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #1877f2;
+}
+
 .nav-btn {
     background: white;
     color: #2F80ED;
@@ -75,11 +80,6 @@ nav h2 {
     white-space: nowrap;
     transition: background 0.3s;
 }
-
-.nav-bar a:hover {
-    background: rgba(0, 0, 0, 0.05);
-    color: #1877f2;
-
 
 .nav-btn:hover {
     background: #f0f0f0;
