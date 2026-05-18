@@ -3,55 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services</title>
-<link rel="stylesheet" href="style.css">
+<title>Services - Swiftly Clean Laundry</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
+<!-- NAVBAR -->
 <nav>
-    <h2>Our Services</h2>
-
+    <img src="c:\Users\hiroaki\Downloads\swiftly clean logo image.jpg" alt="Swiftly Clean Laundry Logo" onerror="this.style.display='none'">
+    <h2>Swiftly Clean Laundry</h2>
     <div class="nav-buttons">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="booking.html">Book</a>
+        <button class="nav-btn" onclick="navigateTo('home')">Home</button>
+        <button class="nav-btn active">Services</button>
+        <button class="nav-btn" onclick="navigateTo('about')">About</button>
+        <button class="nav-btn" onclick="navigateTo('contact')">Contact</button>
     </div>
 </nav>
 
-<section class="services">
+<!-- SERVICES -->
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="grid">
 
-    <div class="service-card">
-        <h3>Full-Service Laundry</h3>
-        <img src="full service.jpg" alt="">
-        <p>₱150 per load</p>
+        <!-- FULL-Service Laundry -->
+        <div class="grid-item" onclick="openModal('Full-Service Laundry','₱150 per load','Enjoy the convenience of having everything handled for you with our full service laundry—just drop it off and relax while we do the rest. Your clothes come back fresh, clean, and perfectly folded, saving you time and effort.')">
+            <img src="c:\Users\hiroaki\Downloads\full service.jpg" alt="Full-Service Laundry" onerror="this.src='https://via.placeholder.com/300x280/2F80ED/FFFFFF?text=Laundry'">
+            <div class="overlay">
+                <h3>Full-Service Laundry</h3>
+                <p>₱150 / load</p>
+                <button>View Service</button>
+            </div>
+        </div>
+
+        <!-- Sefl-Service -->
+        <div class="grid-item" onclick="openModal('Self-Service','₱80 per wash','Take control of your laundry with our clean and easy-to-use self service machines. Get your washing done quickly and efficiently at your own pace.')">
+            <img src="c:\Users\hiroaki\Downloads\self service.jpg" alt="Self-Service" onerror="this.src='https://via.placeholder.com/300x280/2F80ED/FFFFFF?text=Self-Service'">
+            <div class="overlay">
+                <h3>Self-Service</h3>
+                <p>₱80 / wash</p>
+                <button>View Service</button>
+            </div>
+        </div>
+
+        <!-- Pickup and Delivery -->
+        <div class="grid-item" onclick="openModal('Pickup & Delivery','₱50 fee','Skip the hassle and let us come to you with our reliable pick-up and delivery service. We make laundry effortless by bringing fresh, clean clothes right to your doorstep.')">
+            <img src="c:\Users\hiroaki\Downloads\laundry delivery.jpg" alt="Pickup & Delivery" onerror="this.src='https://via.placeholder.com/300x280/2F80ED/FFFFFF?text=Pickup'">
+            <div class="overlay">
+                <h3>Pickup & Delivery</h3>
+                <p>₱50 fee</p>
+                <button>View Service</button>
+            </div>
+        </div>
+
+        <!-- Shoe Cleaning -->
+        <div class="grid-item" onclick="openModal('Shoe Cleaning','₱500 per pair','Bring your shoes back to life with our professional cleaning service. We carefully remove dirt and stains to make them look as good as new.')">
+            <img src="c:\Users\hiroaki\Downloads\shoe clean.jpg" alt="Shoe Cleaning" onerror="this.src='https://via.placeholder.com/300x280/2F80ED/FFFFFF?text=Shoes'">
+            <div class="overlay">
+                <h3>Shoe Cleaning</h3>
+                <p>₱500 / pair</p>
+                <button>View Service</button>
+            </div>
+        </div>
+
+        <!-- Dry Cleaning -->
+        <div class="grid-item" onclick="openModal('Dry Cleaning','₱200+','Trust your delicate garments to our expert dry cleaning service for a safe and thorough clean. We preserve the quality and extend the life of your favorite clothes.')">
+            <img src="c:\Users\hiroaki\Downloads\Dry cleaning.jpg" alt="Dry Cleaning" onerror="this.src='https://via.placeholder.com/300x280/2F80ED/FFFFFF?text=Dry+Clean'">
+            <div class="overlay">
+                <h3>Dry Cleaning</h3>
+                <p>Starts ₱200</p>
+                <button>View Service</button>
+            </div>
+        </div>
+
+        <!-- Iron press -->
+        <div class="grid-item" onclick="openModal('Iron press','₱30 per piece','Keep your outfits neat and sharp with our precise iron press service. We ensure every piece is wrinkle-free and ready to wear with confidence.')">
+            <img src="c:\Users\hiroaki\Downloads\Iron press.jpg" alt="Iron press" onerror="this.src='https://via.placeholder.com/300x280/2F80ED/FFFFFF?text=Ironing'">
+            <div class="overlay">
+                <h3>Iron press</h3>
+                <p>₱30 / piece</p>
+                <button>View Service</button>
+            </div>
+        </div>
+
+        <!-- Steam press -->
+        <div class="grid-item" onclick="openModal('Steam press','₱30 per piece','Achieve a crisp, polished look with our steam press service that removes wrinkles effortlessly. Perfect for making your clothes look fresh and professionally finished.')">
+            <img src="c:\Users\hiroaki\Downloads\Steam press.jpg" alt="Steam press" onerror="this.src='https://via.placeholder.com/300x280/2F80ED/FFFFFF?text=Ironing'">
+            <div class="overlay">
+                <h3>Steam press</h3>
+                <p>₱30 / piece</p>
+                <button>View Service</button>
+            </div>
+        </div>
+
+        <!-- Carpet Cleaning -->
+        <div class="grid-item" onclick="openModal('Carpet cleaning','₱30 per piece','Refresh your home with our deep carpet cleaning that removes dirt, stains, and allergens. Experience cleaner, healthier spaces with carpets that look and feel brand new.')">
+            <img src="c:\Users\hiroaki\Downloads\carpet cleaning.jpg" alt="Carpet cleaning" onerror="this.src='https://via.placeholder.com/300x280/2F80ED/FFFFFF?text=Ironing'">
+            <div class="overlay">
+                <h3>Carpet Cleaning</h3>
+                <p>₱30 / piece</p>
+                <button>View Service</button>
+            </div>
+        </div>
+
+        <!-- upholstery cleaning -->
+        <div class="grid-item" onclick="openModal('upholstery cleaning','₱30 per piece','Revitalize your furniture with our professional upholstery cleaning that removes deep-seated dirt, stains, and odors. Enjoy a fresher, cleaner home with sofas and chairs that look and feel like new.')">
+            <img src="c:\Users\hiroaki\Downloads\upholstery cleaning.jpg" alt="upholstery cleaning" onerror="this.src='https://via.placeholder.com/300x280/2F80ED/FFFFFF?text=Ironing'">
+            <div class="overlay">
+                <h3>upholstery Cleaning</h3>
+                <p>₱30 / piece</p>
+                <button>View Service</button>
+            </div>
+        </div>
     </div>
-
-    <div class="service-card">
-        <h3>Self-Service</h3>
-        <img src="self service.jpg" alt="">
-        <p>₱80 per wash</p>
-    </div>
-
-    <div class="service-card">
-        <h3>Pickup & Delivery</h3>
-        <img src="laundry delivery.jpg" alt="">
-        <p>₱50 fee</p>
-    </div>
-
-    <div class="service-card">
-        <h3>Shoe Cleaning</h3>
-        <img src="shoe clean.jpg" alt="">
-        <p>₱500 per pair</p>
-    </div>
-
-    <div class="service-card">
-        <h3>Dry Cleaning</h3>
-        <img src="Dry cleaning.jpg" alt="">
-        <p>Starts ₱200</p>
-    </div>
-
 </section>
+<!-- MODAL -->
+<div id="serviceModal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalPrice"></p>
+        <p id="modalDesc"></p>
+        <button class="contact-btn" onclick="bookService(event)">Book Now</button>
+    </div>
+</div>
 
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2024 Swiftly Clean Laundry. All rights reserved. | Taytay, Rizal</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
