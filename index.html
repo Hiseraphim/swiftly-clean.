@@ -4,297 +4,151 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Swiftly Clean Laundry</title>
-<script src="script.js"></script>
-<link rel="stylesheet" href="style.css"> 
-<link rel="stylesheet" href="service.html">
-<link rel="stylesheet" href="account.html">
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 
 <body>
+
 <!-- NAVBAR -->
 <nav>
-    <img src="swiftly clean logo image.jpg" alt="Swiftly Clean Laundry Logo" onerror="this.style.display='none'">
+    <img src="swiftly clean logo image.jpg" alt="Logo">
     <h2>Swiftly Clean Laundry</h2>
+
     <div class="nav-buttons">
         <button class="nav-btn" onclick="scrollToSection('home')">Home</button>
-        <button class="nav-btn" onclick="window.location.href='service.html'">Service</button>
-        <button class="nav-btn" onclick="window.location.href='account.html'">Account</button>
+        <button class="nav-btn" onclick="scrollToSection('services')">Services</button>
+        <button class="nav-btn" onclick="scrollToSection('booking')">Book</button>
         <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
     </div>
 </nav>
 
-<!-- FULL-SCREEN HERO SLIDESHOW -->
+<!-- HERO -->
 <section class="hero" id="home">
-    <div class="hero-slideshow">
-        <!-- Slide 1 - first image-->
-        <img class="hero-slide active" 
-             src="home page.jpg" 
-             alt="Laundry Service Background 1"
-             onerror="this.src='https://via.placeholder.com/1920x1080/2F80ED/FFFFFF?text=Laundry+Service+1'">
-        
-        <!-- Slide 2 - second image  -->
-        <img class="hero-slide" 
-             src="second home page.jpg" 
-             alt="Laundry Service Background 2"
-             onerror="this.src='https://via.placeholder.com/1920x1080/2F80ED/FFFFFF?text=Laundry+Service+2'">
-        
-        <!-- Slide 3 - third image  -->
-        <img class="hero-slide" 
-             src="third home page.jpg" 
-             alt="Laundry Service Background 3"
-             onerror="this.src='https://via.placeholder.com/1920x1080/2F80ED/FFFFFF?text=Laundry+Service+3'">
 
-              <!-- Slide 4 - fourth image  -->
-        <img class="hero-slide" 
-             src="fourth home page.jpg" 
-             alt="Laundry Service Background 4"
-             onerror="this.src='https://via.placeholder.com/1920x1080/2F80ED/FFFFFF?text=Laundry+Service+4'">
+    <div class="hero-slideshow">
+        <img class="hero-slide active" src="home page.jpg">
+        <img class="hero-slide" src="second home page.jpg">
+        <img class="hero-slide" src="third home page.jpg">
+        <img class="hero-slide" src="fourth home page.jpg">
     </div>
-    
+
     <div class="hero-overlay"></div>
-    
+
     <div class="hero-content">
-        <h1>Fast, Professional, and Stress-Free Laundry Service in Taytay, Rizal</h1>
-        <p>Experience the convenience of our top-notch laundry services. We handle your clothes with care, so you can enjoy more free time!</p>
-        <button class="contact-btn" onclick="scrollToSection('services')">Explore Our Services</button>
+        <h1>Fast, Professional Laundry Service in Taytay, Rizal</h1>
+        <p>We take care of your clothes so you enjoy more free time.</p>
+
+        <button class="contact-btn" onclick="scrollToSection('services')">
+            Explore Services
+        </button>
     </div>
 </section>
 
 <!-- ABOUT -->
-    
-<section class="about" id="about">
-   
-<div class="about">
-
-<div class="about-text">
-
-    <h1>About Us</h1>
+<section class="section" id="about">
+    <h2>About Us</h2>
     <p>
-        Welcome to <strong>Swiftly Clean Laundry</strong>, your trusted laundry service 
-        provider in Taytay, Rizal. We are dedicated to giving our customers clean, fresh, 
-        and well-cared-for clothes while saving them time and effort. Our goal is to make 
-        laundry day easier, faster, and stress-free for students, workers, families, and 
-        busy individuals who need reliable laundry services.
+        Swiftly Clean Laundry provides fast and reliable laundry services in Taytay, Rizal.
+        We handle wash, dry, fold, and special cleaning with care and quality.
     </p>
-
-    <p>
-        At Swiftly Clean Laundry, we use modern washing and drying equipment together with 
-        quality detergents and fabric care products to ensure your clothes are handled with 
-        care. From everyday clothing to delicate fabrics, we make sure every load is cleaned 
-        properly, smells fresh, and is neatly folded before pickup or delivery.
-    </p>
-
-    <p>
-        We pride ourselves on providing excellent customer service, affordable prices, and 
-        convenient laundry solutions. Our friendly staff works hard to maintain cleanliness, 
-        efficiency, and customer satisfaction in every order we handle. Whether you need 
-        wash-and-fold services, regular laundry cleaning, or delivery assistance, we are 
-        always ready to help.
-    </p>
-
-    <p>
-        Swiftly Clean Laundry believes that clean clothes bring comfort and confidence. 
-        That is why we continue improving our services to give our customers the best laundry 
-        experience possible. Thank you for trusting us to take care of your laundry needs!
-    </p>
-
-    </div>
-
-<div class="about-img">
-
-<img onclick="openModal(this.src)"
-src="full service.jpg">
-
-</div>
-
-</div>
-
 </section>
-</section>
-
 
 <!-- SERVICES -->
-<section id="services" class="section">
+<section class="section" id="services">
     <h2>Our Services</h2>
+
     <div class="grid">
 
-        <!-- FULL-Service Laundry -->
-        <div class="grid-item" onclick="openModal('Full-Service Laundry','₱150 per load','Enjoy the convenience of having everything handled for you with our full service laundry—just drop it off and relax while we do the rest. Your clothes come back fresh, clean, and perfectly folded, saving you time and effort.')">
+        <div class="service-card">
+            <h3>Full-Service Laundry</h3>
             <img src="full service.jpg">
-            <div class="overlay">
-                <h3>Full-Service Laundry</h3>
-                <p>₱150 / load</p>
-                <button>View Service</button>
-            </div>
+            <p>₱150 / load</p>
+            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
         </div>
 
-        <!-- Sefl-Service -->
-        <div class="grid-item" onclick="openModal('Self-Service','₱80 per wash','Take control of your laundry with our clean and easy-to-use self service machines. Get your washing done quickly and efficiently at your own pace.')">
+        <div class="service-card">
+            <h3>Self-Service</h3>
             <img src="self service.jpg">
-            <div class="overlay">
-                <h3>Self-Service</h3>
-                <p>₱80 / wash</p>
-                <button>View Service</button>
-            </div>
+            <p>₱80 / wash</p>
+            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
         </div>
 
-        <!-- Pickup and Delivery -->
-        <div class="grid-item" onclick="openModal('Pickup & Delivery','₱50 fee','Skip the hassle and let us come to you with our reliable pick-up and delivery service. We make laundry effortless by bringing fresh, clean clothes right to your doorstep.')">
+        <div class="service-card">
+            <h3>Pickup & Delivery</h3>
             <img src="laundry delivery.jpg">
-            <div class="overlay">
-                <h3>Pickup & Delivery</h3>
-                <p>₱50 fee</p>
-                <button>View Service</button>
-            </div>
+            <p>₱50 fee</p>
+            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
         </div>
 
-        <!-- Shoe Cleaning -->
-        <div class="grid-item" onclick="openModal('Shoe Cleaning','₱500 per pair','Bring your shoes back to life with our professional cleaning service. We carefully remove dirt and stains to make them look as good as new.')">
+        <div class="service-card">
+            <h3>Shoe Cleaning</h3>
             <img src="shoe clean.jpg">
-            <div class="overlay">
-                <h3>Shoe Cleaning</h3>
-                <p>₱500 / pair</p>
-                <button>View Service</button>
-            </div>
+            <p>₱500 / pair</p>
+            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
         </div>
 
-        <!-- Dry Cleaning -->
-        <div class="grid-item" onclick="openModal('Dry Cleaning','₱200+','Trust your delicate garments to our expert dry cleaning service for a safe and thorough clean. We preserve the quality and extend the life of your favorite clothes.')">
+        <div class="service-card">
+            <h3>Dry Cleaning</h3>
             <img src="Dry cleaning.jpg">
-            <div class="overlay">
-                <h3>Dry Cleaning</h3>
-                <p>Starts ₱200</p>
-                <button>View Service</button>
-            </div>
+            <p>Starts ₱200</p>
+            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
         </div>
 
-        <!-- Iron press -->
-        <div class="grid-item" onclick="openModal('Iron press','₱30 per piece','Keep your outfits neat and sharp with our precise iron press service. We ensure every piece is wrinkle-free and ready to wear with confidence.')">
-            <img src="Iron press.jpg">
-            <div class="overlay">
-                <h3>Iron press</h3>
-                <p>₱30 / piece</p>
-                <button>View Service</button>
-            </div>
-        </div>
-
-        <!-- Steam press -->
-        <div class="grid-item" onclick="openModal('Steam press','₱30 per piece','Achieve a crisp, polished look with our steam press service that removes wrinkles effortlessly. Perfect for making your clothes look fresh and professionally finished.')">
-            <img src="Steam press.jpg">
-            <div class="overlay">
-                <h3>Steam press</h3>
-                <p>₱30 / piece</p>
-                <button>View Service</button>
-            </div>
-        </div>
-
-        <!-- Carpet Cleaning -->
-        <div class="grid-item" onclick="openModal('Carpet cleaning','₱30 per piece','Refresh your home with our deep carpet cleaning that removes dirt, stains, and allergens. Experience cleaner, healthier spaces with carpets that look and feel brand new.')">
-            <img src="carpet cleaning.jpg">
-            <div class="overlay">
-                <h3>Carpet Cleaning</h3>
-                <p>₱30 / piece</p>
-                <button>View Service</button>
-            </div>
-        </div>
-
-        <!-- upholstery cleaning -->
-        <div class="grid-item" onclick="openModal('upholstery cleaning','₱30 per piece','Revitalize your furniture with our professional upholstery cleaning that removes deep-seated dirt, stains, and odors. Enjoy a fresher, cleaner home with sofas and chairs that look and feel like new.')">
-            <img src="upholstery cleaning.jpg">
-            <div class="overlay">
-                <h3>upholstery Cleaning</h3>
-                <p>₱30 / piece</p>
-                <button>View Service</button>
-            </div>
-        </div>
     </div>
 </section>
-    
-<section id="booking" class="section">
 
+<!-- BOOKING -->
+<section class="section" id="booking">
     <h2>Book a Laundry Pickup</h2>
 
-    <form id="bookingForm" class="booking-form">
+    <form class="booking-form">
 
-        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <textarea placeholder="Pickup Address" required></textarea>
 
-        <input type="tel" id="phone" placeholder="Phone Number" required>
-
-        <textarea id="address" placeholder="Pickup Address" required></textarea>
-
-        <select id="service" required>
-
+        <select required>
             <option value="">Select Service</option>
-
             <option>Full-Service Laundry</option>
-
             <option>Self-Service</option>
-
             <option>Pickup & Delivery</option>
-
             <option>Shoe Cleaning</option>
-
             <option>Dry Cleaning</option>
-
         </select>
 
         <input type="date" required>
-
         <input type="time" required>
 
         <select required>
-
             <option value="">Payment Method</option>
-
             <option>GCash</option>
-
             <option>Bank Transfer</option>
-
             <option>Cash on Delivery</option>
-
         </select>
 
-        <button type="submit" class="contact-btn">
-
-            Confirm Booking
-
-        </button>
-
+        <button type="submit" class="contact-btn">Confirm Booking</button>
     </form>
-
-    <p id="bookingMessage"></p>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <div style="max-width: 500px; margin: 0 auto;">
-        <p style="font-size: 1.2em; margin: 20px 0;">
-            📧 <a href="mailto:swiftlycleanlaundromat1@gmail.com" style="color: #2F80ED; text-decoration: none;">swiftlycleanlaundromat1@gmail.com</a>
-        </p>
-        <p style="font-size: 1.2em; margin: 20px 0;">
-            💬 <a href="https://www.facebook.com/messages/t/283108582142314" target="_blank" style="color: #2F80ED; text-decoration: none;">Message on Facebook</a>
-        </p>
-        <p style="font-size: 1.2em; margin: 20px 0;">📍 Taytay, Rizal</p>
-        <button class="contact-btn" onclick="alert('Thank you! We will contact you soon!')">Send Message</button>
-    </div>
 </section>
 
-<!-- MODAL -->
-<div id="serviceModal" class="modal" onclick="closeModal(event)">
-    <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <p id="modalPrice"></p>
-        <p id="modalDesc"></p>
-        <button class="contact-btn" onclick="bookService(event)">
-            Book Now
-        </button>
-    </div>
-</div>
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h2>Contact Us</h2>
+
+    <p>📧 swiftlycleanlaundromat1@gmail.com</p>
+    <p>📍 Taytay, Rizal</p>
+
+    <button class="contact-btn"
+        onclick="alert('Thank you! We will contact you soon!')">
+        Send Message
+    </button>
+</section>
 
 <!-- FOOTER -->
 <footer>
-    <p>&copy; 2024 Swiftly Clean Laundry. All rights reserved. | Taytay, Rizal</p>
+    <p>© 2024 Swiftly Clean Laundry</p>
 </footer>
+
 </body>
 </html>
