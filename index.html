@@ -4,151 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Swiftly Clean Laundry</title>
-
 <link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <nav>
-    <img src="swiftly clean logo image.jpg" alt="Logo">
     <h2>Swiftly Clean Laundry</h2>
 
     <div class="nav-buttons">
-        <button class="nav-btn" onclick="scrollToSection('home')">Home</button>
-        <button class="nav-btn" onclick="scrollToSection('services')">Services</button>
-        <button class="nav-btn" onclick="scrollToSection('booking')">Book</button>
-        <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book</a>
     </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Swiftly Clean Laundry</h1>
+    <p>Fast, Reliable Laundry Service in Taytay, Rizal</p>
 
-    <div class="hero-slideshow">
-        <img class="hero-slide active" src="home page.jpg">
-        <img class="hero-slide" src="second home page.jpg">
-        <img class="hero-slide" src="third home page.jpg">
-        <img class="hero-slide" src="fourth home page.jpg">
-    </div>
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-        <h1>Fast, Professional Laundry Service in Taytay, Rizal</h1>
-        <p>We take care of your clothes so you enjoy more free time.</p>
-
-        <button class="contact-btn" onclick="scrollToSection('services')">
-            Explore Services
-        </button>
-    </div>
+    <a class="btn" href="services.html">View Services</a>
 </section>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-    <h2>About Us</h2>
-    <p>
-        Swiftly Clean Laundry provides fast and reliable laundry services in Taytay, Rizal.
-        We handle wash, dry, fold, and special cleaning with care and quality.
-    </p>
-</section>
-
-<!-- SERVICES -->
-<section class="section" id="services">
-    <h2>Our Services</h2>
-
-    <div class="grid">
-
-        <div class="service-card">
-            <h3>Full-Service Laundry</h3>
-            <img src="full service.jpg">
-            <p>₱150 / load</p>
-            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
-        </div>
-
-        <div class="service-card">
-            <h3>Self-Service</h3>
-            <img src="self service.jpg">
-            <p>₱80 / wash</p>
-            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
-        </div>
-
-        <div class="service-card">
-            <h3>Pickup & Delivery</h3>
-            <img src="laundry delivery.jpg">
-            <p>₱50 fee</p>
-            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
-        </div>
-
-        <div class="service-card">
-            <h3>Shoe Cleaning</h3>
-            <img src="shoe clean.jpg">
-            <p>₱500 / pair</p>
-            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
-        </div>
-
-        <div class="service-card">
-            <h3>Dry Cleaning</h3>
-            <img src="Dry cleaning.jpg">
-            <p>Starts ₱200</p>
-            <button class="contact-btn" onclick="scrollToSection('booking')">Book Now</button>
-        </div>
-
-    </div>
-</section>
-
-<!-- BOOKING -->
-<section class="section" id="booking">
-    <h2>Book a Laundry Pickup</h2>
-
-    <form class="booking-form">
-
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <textarea placeholder="Pickup Address" required></textarea>
-
-        <select required>
-            <option value="">Select Service</option>
-            <option>Full-Service Laundry</option>
-            <option>Self-Service</option>
-            <option>Pickup & Delivery</option>
-            <option>Shoe Cleaning</option>
-            <option>Dry Cleaning</option>
-        </select>
-
-        <input type="date" required>
-        <input type="time" required>
-
-        <select required>
-            <option value="">Payment Method</option>
-            <option>GCash</option>
-            <option>Bank Transfer</option>
-            <option>Cash on Delivery</option>
-        </select>
-
-        <button type="submit" class="contact-btn">Confirm Booking</button>
-    </form>
-</section>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-    <h2>Contact Us</h2>
-
-    <p>📧 swiftlycleanlaundromat1@gmail.com</p>
-    <p>📍 Taytay, Rizal</p>
-
-    <button class="contact-btn"
-        onclick="alert('Thank you! We will contact you soon!')">
-        Send Message
-    </button>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2024 Swiftly Clean Laundry</p>
-</footer>
 
 </body>
 </html>
