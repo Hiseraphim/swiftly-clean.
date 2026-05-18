@@ -122,15 +122,21 @@
 <!-- MODAL -->
 <div id="serviceModal" class="modal" onclick="closeModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
+
         <span class="close" onclick="closeModal()">&times;</span>
+
         <h2 id="modalTitle"></h2>
         <p id="modalPrice"></p>
-       <p id="modalDesc"></p>
-<button class="contact-btn" onclick="openBookingModal()">
-    Book Now
-</button>
+        <p id="modalDesc"></p>
+
+        <!-- ADD THIS -->
+        <button class="contact-btn" onclick="openBookingModal()">
+            Book Now
+        </button>
+
+    </div>
+</div>
 <!-- BOOKING MODAL -->
-       
 <div id="bookingModal" class="modal" onclick="closeBookingModal(event)">
 
     <div class="modal-content" onclick="event.stopPropagation()">
@@ -177,7 +183,6 @@
     </div>
 
 </div>
-
 <!-- FOOTER -->
 <footer>
     <p>&copy; 2024 Swiftly Clean Laundry. All rights reserved. | Taytay, Rizal</p>
