@@ -135,3 +135,6 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
     document.getElementById("bookingForm").reset();
     document.getElementById("bookingModal").style.display = "none";
 });
+function openBookingModal() {
+    document.getElementById("bookingModal").style.display = "flex";
+}
