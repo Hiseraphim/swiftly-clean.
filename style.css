@@ -175,6 +175,43 @@ nav h2 {
     color: #333;
 }
 
+/* ================= ABOUT ================= */
+
+.about{
+  display:flex;
+  gap:40px;
+  align-items:center;
+}
+
+.about-text{
+  width:55%;
+  background:rgba(255,255,255,0.06);
+  padding:35px;
+  border-radius:25px;
+  backdrop-filter:blur(14px);
+  line-height:1.8;
+}
+
+.about-text h1{
+  margin-bottom:20px;
+  font-size:45px;
+}
+
+.about-img{
+  width:45%;
+}
+
+.about-img img{
+  width:100%;
+  border-radius:25px;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+.about-img img:hover{
+  transform:scale(1.03);
+}
+
 /* ================= BOOKING-FORM ================= */
 
 .booking-form{
