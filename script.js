@@ -55,3 +55,24 @@ document.addEventListener('keydown', function(event) {
         closeModal();
     }
 });
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const service = document.getElementById("modalTitle").textContent;
+    const name = document.getElementById("customerName").value;
+    const phone = document.getElementById("customerPhone").value;
+    const date = document.getElementById("bookingDate").value;
+    const time = document.getElementById("bookingTime").value;
+
+    alert(
+        `Booking Confirmed!\n\n` +
+        `Service: ${service}\n` +
+        `Name: ${name}\n` +
+        `Phone: ${phone}\n` +
+        `Date: ${date}\n` +
+        `Time: ${time}`
+    );
+
+    document.getElementById("bookingForm").reset();
+    closeModal();
+});
