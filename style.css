@@ -177,41 +177,209 @@ nav h2 {
 
 /* ================= ABOUT ================= */
 
-.about{
-  display:flex;
-  gap:40px;
-  align-items:center;
+/* ============ ABOUT SECTION ============ */
+.about-section{
+  --blue: #2F80ED;
+  --blue-dark: #1B5FC4;
+  --blue-tint: #EAF2FF;
+  --ink: #1B2733;
+  --ink-soft: #4A5568;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 40px);
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+
+  box-sizing: border-box;
 }
 
+.about-section *{
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* ---- text side ---- */
 .about-text{
-  width:55%;
-  background:rgba(255,255,255,0.06);
-  padding:35px;
-  border-radius:25px;
-  backdrop-filter:blur(14px);
-  line-height:1.8;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.about-eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-dark);
+  background: var(--blue-tint);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.bubble-icon{
+  width: 14px;
+  height: 14px;
+  color: var(--blue);
 }
 
 .about-text h1{
-  margin-bottom:20px;
-  font-size:45px;
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  color: var(--ink);
+  margin: 0 0 14px;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
+.about-divider{
+  display: block;
+  width: 56px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--blue), var(--blue-dark));
+  margin-bottom: 24px;
+}
+
+.about-text p{
+  font-size: clamp(0.98rem, 1.1vw, 1.05rem);
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+  max-width: 62ch;
+  overflow-wrap: break-word;
+}
+
+.about-text p:last-of-type{
+  margin-bottom: 0;
+}
+
+.about-text strong{
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
+/* ---- image side ---- */
 .about-img{
-  width:45%;
+  animation: fadeInScale 0.8s ease 0.15s both;
+  display: flex;
+  justify-content: center;
 }
 
 .about-img img{
-  width:100%;
-  border-radius:25px;
-  transition:0.5s;
-  cursor:pointer;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(47, 128, 237, 0.18), 0 2px 8px rgba(0,0,0,0.06);
+  border: 4px solid #ffffff;
+  outline: 1px solid var(--blue-tint);
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.about-img img:hover{
-  transform:scale(1.03);
+.about-img img:hover,
+.about-img img:focus-visible{
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 18px 40px rgba(47, 128, 237, 0.28), 0 4px 10px rgba(0,0,0,0.08);
+  outline: none;
 }
 
+.about-img img:focus-visible{
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* ---- animations ---- */
+@keyframes fadeInUp{
+  from{ opacity: 0; transform: translateY(18px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale{
+  from{ opacity: 0; transform: scale(0.96); }
+  to{ opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .about-text, .about-img{
+    animation: none;
+  }
+}
+
+/* ============ RESPONSIVE-ABOUT ============ */
+
+/* Tablet */
+@media (max-width: 992px){
+  .about-section{
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: left;
+  }
+  .about-text p{
+    max-width: 100%;
+  }
+  .about-img{
+    order: -1; /* image above text on tablet/mobile */
+  }
+  .about-img img{
+    max-width: 480px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .about-section{
+    padding: 48px 20px;
+    gap: 32px;
+  }
+  .about-text h1{
+    font-size: 1.7rem;
+  }
+  .about-text p{
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .about-img img{
+    border-radius: 16px;
+    max-width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+  .about-section{
+    padding: 40px 16px;
+  }
+  .about-eyebrow{
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+  .about-text h1{
+    font-size: 1.5rem;
+  }
+  .about-divider{
+    width: 44px;
+    height: 3px;
+  }
+  .about-text p{
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+  .about-img img{
+    border-width: 3px;
+  }
+}
+
+/* Prevent any horizontal scroll from this section */
+html, body{
+  overflow-x: hidden;
+}
 /* ================= BOOKING-FORM ================= */
 
 .booking-form{
