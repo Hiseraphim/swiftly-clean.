@@ -178,33 +178,30 @@ nav h2 {
 /* ================= ABOUT ================= */
 
 /* ============ ABOUT SECTION ============ */
+/* ================= ABOUT US ================= */
+
+
 .about-section{
   --blue: #2F80ED;
-  --blue-dark: #1B5FC4;
-  --blue-tint: #EAF2FF;
+  --blue-dark: #1c5fc0;
+  --blue-light: #EAF2FF;
   --ink: #1B2733;
-  --ink-soft: #4A5568;
-
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 40px);
-
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: clamp(32px, 6vw, 72px);
+  --muted: #55606B;
+  display: flex;
   align-items: center;
-
-  box-sizing: border-box;
+  gap: 56px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 80px 24px;
 }
 
-.about-section *{
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-/* ---- text side ---- */
+/* ---- text column ---- */
 .about-text{
-  animation: fadeInUp 0.7s ease both;
+  flex: 1 1 50%;
+  min-width: 0;
+  opacity: 0;
+  animation: aboutFadeUp .7s ease forwards;
+  animation-delay: .1s;
 }
 
 .about-eyebrow{
@@ -216,51 +213,51 @@ nav h2 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--blue-dark);
-  background: var(--blue-tint);
+  background: var(--blue-light);
   padding: 6px 14px;
   border-radius: 999px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
-
-.bubble-icon{
-  width: 14px;
-  height: 14px;
-  color: var(--blue);
+.about-eyebrow-icon{
+  width: 16px;
+  height: 16px;
+  flex: none;
 }
 
 .about-text h1{
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(1.9rem, 3.2vw, 2.6rem);
-  color: var(--ink);
-  margin: 0 0 14px;
-  line-height: 1.2;
   font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 20px;
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 14px;
 }
-
-.about-divider{
-  display: block;
+.about-text h1::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 56px;
   height: 4px;
   border-radius: 4px;
-  background: linear-gradient(90deg, var(--blue), var(--blue-dark));
-  margin-bottom: 24px;
+  background: linear-gradient(90deg, var(--blue), var(--blue-light));
 }
 
 .about-text p{
-  font-size: clamp(0.98rem, 1.1vw, 1.05rem);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
   line-height: 1.75;
-  color: var(--ink-soft);
+  color: var(--muted);
+  max-width: 46ch;
   margin: 0 0 18px;
-  max-width: 62ch;
-  overflow-wrap: break-word;
 }
-
-.about-text p:last-of-type{
+.about-text p:last-child{
   margin-bottom: 0;
 }
-
 .about-text strong{
-  color: var(--blue-dark);
-  font-weight: 700;
+  color: var(--ink);
 }
 
 /* ---- image column ---- */
@@ -305,22 +302,9 @@ nav h2 {
   outline: none;
 }
 
-
-/* ---- animations ---- */
-@keyframes aboutFadeInUp{
+@keyframes aboutFadeUp{
   from{ opacity: 0; transform: translateY(18px); }
   to{ opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInScale{
-  from{ opacity: 0; transform: scale(0.96); }
-  to{ opacity: 1; transform: scale(1); }
-}
-
-@media (prefers-reduced-motion: reduce){
-  .about-text, .about-img{
-    animation: none;
-  }
 }
 
 /* ================= RESPONSIVE ================= */
