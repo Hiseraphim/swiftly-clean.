@@ -413,7 +413,7 @@ nav h2 {
 
 
 /* ================= FOOTER ================= */
-.footer{
+.root{
   --blue: #2F80ED;
   --blue-light: #6FA8FF;
   --navy: #10203A;
@@ -514,20 +514,12 @@ nav h2 {
   gap: 12px;
   font-size: 0.92rem;
 }
-.hours-row dt{
-  color: #000;
-  font-weight:500;
-}
-.hours-row dd{
-  margin:0;
-  color: #000;
-}
-.hours-list{
-  margin:0;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
+.hours-row dt{ 
+    color: #fff; font-weight:500; }
+.hours-row dd{ 
+    margin:0; color: var(--text-dim); }
+.hours-list{ 
+    margin:0; display:flex; flex-direction:column; gap:10px; }
 .footer-bottom{
   margin-top: 48px;
   padding-top: 22px;
