@@ -413,6 +413,14 @@ nav h2 {
 
 
 /* ================= FOOTER ================= */
+.footer{
+  --blue: #2F80ED;
+  --blue-light: #6FA8FF;
+  --navy: #10203A;
+  --navy-2: #16294A;
+  --line: rgba(255,255,255,0.10);
+  --text-dim: rgba(255,255,255,0.68);
+}
 .site-footer{
   background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
   color: var(--text-dim);
