@@ -414,13 +414,11 @@ nav h2 {
 
 /* ================= FOOTER ================= */
 
-.site-footer {
-  --blue: #2F80ED;
-  --blue-light: #6FA8FF;
-  --navy: #10203A;
-  --navy-2: #16294A;
-  --line: rgba(255,255,255,0.10);
-  --text-dim: rgba(255,255,255,0.68);
+.site-footer{
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: var(--text-dim);
+  padding: 64px 24px 28px;
+}
 
   background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
   color: var(--text-dim);
@@ -515,7 +513,7 @@ nav h2 {
   font-size: 0.92rem;
 }
 .hours-row dt{ 
-    color: #fff; font-weight:500; }
+    color: black; font-weight:500; }
 .hours-row dd{ 
     margin:0; color: var(--text-dim); }
 .hours-list{ 
